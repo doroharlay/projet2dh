@@ -1,0 +1,43 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+    <h1> Create your user account </h1>
+    {#{ form(formulaire) }#}
+    <form class="form-horizontal" method="post" novalidate>
+
+        <p>{{ form_label(formulaire.username, 'Username :') }}
+            {{ form_widget(formulaire.username)}}
+
+            {{ form_errors(formulaire.username) }}
+
+        </p>
+
+        <p>{{ form_label(formulaire.password, 'Password :') }}
+            <br/>
+            {{ form_widget(formulaire.password) }}
+            {{ form_errors(formulaire.password) }}
+        </p>
+        <p>{{ form_label(formulaire.email, 'Email :') }}
+            <br/>
+            {{ form_widget(formulaire.email) }}
+            {{ form_errors(formulaire.email) }}
+        </p>
+        <p>{{ form_label(formulaire.address, 'Address :') }}
+            <br/>
+            {{ form_widget(formulaire.address) }}
+            {{ form_errors(formulaire.address) }}
+        </p>
+        <p>{{ form_label(formulaire.phone, 'Phone :') }}
+            <br/>
+            {{ form_widget(formulaire.phone) }}
+            {{ form_errors(formulaire.phone) }}
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+
+        {{ form_widget(formulaire._token) }}
+
+    </form>
+
+{% endblock %}

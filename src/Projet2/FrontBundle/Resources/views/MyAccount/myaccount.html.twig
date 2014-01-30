@@ -1,0 +1,28 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+
+{% if app.user != null %}
+    <h1> Bonjour {{ app.user.username }}. Votre compte a été créé. Bienvenue dans notre service </h1>
+    <p>
+{% endif %}
+
+   
+    {#{ TEST ADMIN GRANTED }#}
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href ="{{ url('root') }}">Bonjour ADMINISTRATEUR</a>
+    {% endif %}
+        </br>
+        </br>
+        
+    {#{ TEST USER GRANTED }#}
+    {% if is_granted('ROLE_USER') %}
+        <a href ="{{ url('root') }}">Bonjour USER</a>
+    {% endif %}
+    
+    </br></br><a href ="{{ url('root') }}">Retour accueil</a><br>
+    
+
+</p>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+parameters:
+#    back.example.class: Projet2\BackBundle\Example
+
+services:
+#    back.example:
+#        class: %back.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

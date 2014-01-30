@@ -1,0 +1,30 @@
+#route pour l'authentification par la couche de sécurité Symfony
+    
+login:
+    pattern: /login
+    defaults: { _controller: FrontBundle:Authentication:Authentication }
+login_check:
+    pattern: /login_check
+logout:
+    pattern: /logout
+    
+front_home:
+    resource:  '@FrontBundle/Controller/HomeController.php'
+    type: annotation
+    
+front_registration:
+    resource:  '@FrontBundle/Controller/RegistrationController.php'
+    type: annotation
+    
+front_product:
+    resource:  '@FrontBundle/Controller/ProductController.php'
+    type: annotation
+    
+front_basket:
+    resource:  '@FrontBundle/Controller/BasketController.php'
+    type: annotation
+
+front_command:
+    resource:  '@FrontBundle/Controller/CommandController.php'
+    type: annotation
+

@@ -1,0 +1,11 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+
+    <ul>
+
+    {% for type in listeTypes %}
+        <a type="button" class="btn btn-primary btn-lg" href=" {{ url('onetype', { 'id' : type.id }) }} ">{{ type.name }}</a>
+    {% endfor %}      
+
+{% endblock %}

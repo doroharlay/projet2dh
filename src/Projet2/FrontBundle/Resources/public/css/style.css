@@ -1,0 +1,189 @@
+/***** ----------------------------- GLOBAL ----------------------------- *****/
+
+.clear {
+	clear: both;
+}
+html {
+	font-size: 62.5%;
+	font-family: arial, sans-serif;
+}
+
+
+/** ----------------------------- header ----------------------------- **/
+
+header {
+	width: 100%;
+	height: 9em;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.logo {
+	margin-left: 5%;
+	float: left;
+	height: 5em;
+	line-height: 9em;
+}
+header ul {
+	margin-right: 12%;
+        margin-top: 3%;
+	float: right;
+}
+header li {
+	display: inline-block;
+}
+header nav a {
+	display: block;
+	height: 100%;
+	padding: 0 0 0 3em;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.2em;
+	line-height: 10.7em;
+	color: #d3d3d3;
+}
+header nav a:hover {
+	color: #1c1c1c;
+}
+
+/** ----------------------------- footer ----------------------------- **/
+
+footer {
+	width: 100%;
+	height: 37em;
+	background-color: #1c1c1c;
+	margin-top: 2.5em;
+}
+footer ul {
+        list-style: none;
+}
+footer > ul {
+	margin-left: 12%;
+	margin-right: 12%;
+}
+footer > ul > li:nth-child(1) {
+	float: right;
+	width: 25%;
+}
+footer > ul > li:nth-child(2),
+footer > ul > li:nth-child(3),
+footer > ul > li:nth-child(4) {
+	float: left;
+	width: 25%;
+}
+footer .titre {
+	color: #e6e6e6;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-bottom: 2.3em;
+	margin-top: 2.3em;
+}
+footer a:link,
+footer a:visited {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 1em;
+	color: #666;
+}
+footer a:hover,
+footer a:active,
+footer a:focus {
+	color: #d3d3d3;
+}
+.try a {
+	border-radius: 2.9em;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.8em;
+	padding: 1.2em 2em;
+	margin-top: 3.5em;
+	background-color: #e6e6e6;
+	color: #1c1c1c;
+}
+.try a:hover {
+	background-color: #d3d3d3;
+	color: #1c1c1c;
+}
+footer p {
+	color: #e6e6e6;
+	font-size: 1.2em;
+	line-height: 2.7em;
+}
+.truste {
+	margin-top: 2em;
+}
+
+
+/** ----------------------------- section----------------------------- **/
+
+section {
+    margin: 9em 8em;
+}
+.price {
+    font-size: 2em;
+    width: 5em;
+}
+.greyback {
+    background: #d3d3d3;
+    border-radius: 0.2em 0.2em;
+    color:#ffffff;
+    text-align: center;
+    padding: 0.2em 0.2em;
+}
+.unavailable {
+    background: #ffcc00;;
+    border-radius: 0.2em 0.2em;
+    color: #fff;
+    text-align: center;
+    padding: 0.2em 0.2em;
+    display: inline-block;
+    width: auto;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 1.5em; 
+    margin: 2em 0;
+}
+.figure {
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+figure > img {
+    margin: 0 0 2em 0;
+}
+.shortdescription {
+    height: 20em;
+    overflow: auto;
+    margin: 2em 2em;
+}
+
+.button{
+    margin: 5em 5em;
+}
+form {
+    width: 15em;
+    display: inline-block;
+}
+/**-------------------------------home---------------------------------------**/
+.hero-tour {
+    background-image: url('../img/hero-tour.jpg');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 600px;
+    margin: 0 0;
+    background-size: cover;
+    
+}
+/**-------------------------------basket---------------------------------------**/
+
+.advertising {
+    font-size: 2em;
+    font-weight: bold;
+    color: #d58512;
+}

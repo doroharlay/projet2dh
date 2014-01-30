@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>{% block title %}ART.SPACE{% endblock %}</title>
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<![endif]-->
+	{% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset ('bundles/front/css/bootstrap.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset ('bundles/front/css/style.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset ('bundles/front/css/media.css') }} ">
+        {% endblock %}
+	<link rel="icon" type="image/png" href="{{ asset ('bundles/front/img/favicon.png') }} " />
+        
+	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /><![endif]-->
+</head>
+<body>
+        
+	<!-- header -->
+	<header>
+		<!-- logo -->
+		<div class="logo"><a href="tour.html"><img src="{{ asset ('bundles/front/img/logo.png') }}" alt="Art.space"></a></div>
+		<!-- navigation principale -->
+		<nav>
+			<ul class="nav nav-tabs">
+				<li><a href="{{ path('root') }}">Home</a></li>
+                                <li><a href="{{ path('roottype') }}">products</a></li>
+                                {% if (is_granted('IS_AUTHENTICATED_ANONYMOUSLY')) %}
+                                    <li><a href="{{ path('login') }}">Sign in</a></li>
+                                {% endif %}
+                                {% if (is_granted('IS_AUTHENTICATED_ANONYMOUSLY')) %}
+                                    <li><a href="{{ path('registration') }}">Sign up</a></li>
+                                {% endif %}
+				{% if (is_granted('IS_AUTHENTICATED_REMEMBERED')) %}
+                                    <li><a href="{{ path('logout') }}">Logout</a></li>
+                                {% endif %}
+                                {% if (is_granted('ROLE_ADMIN')) %}
+                                    <li><a href="{{ path('adminroot') }}">Back-Office</a></li>
+                                {% endif %}
+                                <li><a href="{{ path('basket') }}">basket</a></li>
+
+				
+			</ul>
+		</nav>
+		<div class="clear"></div>
+	</header>
+
+	<section>
+  
+        <div>
+            {% block flashbag %}
+                {# On affiche tous les messages flash dont le nom est « info» #}
+                {% for message in app.session.flashbag.get('info') %}
+                    <p class="advertising">{{ message }}</p>
+                {% endfor %}
+            {% endblock %}
+        </div>
+            
+        {% block section %} 
+        
+            {% block hero %}
+            {% endblock %}
+
+        {% endblock %}
+            
+	</section>
+
+
+	<!-- footer -->
+        <footer>
+            <ul>			
+		<!-- colonne 04 -->
+                <li>
+                        <ul>
+                                <li class="try"><a href="#">try it free</a></li>
+                                <li><p>Free 14-day trial.<br>No credit card required.<br>24/7 support.</p></li>
+                                <li class="truste"><a href="#"><img src="img/footer-truste.png" alt="Truste"></a></li>
+                        </ul>
+                </li>
+		<!-- colonne 01 -->
+                <li>
+                        <ul>
+                                <li class="titre">product</li>
+                                <li><a href="#">Tour</a></li>
+                                <li><a href="#">Templates</a></li>
+                                <li><a href="#">Mobile Apps</a></li>
+                                <li><a href="#">Developers</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                        </ul>
+                </li>
+		<!-- colonne 02 -->
+                <li>
+                        <ul>
+                                <li class="titre">company</li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Carrers</a></li>
+                                <li><a href="#">Press & Media</a></li>
+                                <li><a href="#">Environnemental Impact</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Private Policy</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                        </ul>
+                </li>
+		<!-- colonne 03 -->
+                <li>
+                        <ul>
+                                <li class="titre">community</li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Answers</a></li>
+                                <li><a href="#">Workshops</a></li>
+                                <li><a href="#">Service Updates</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Google +</a></li>
+                                <li><a href="#">Youtube</a></li>
+                        </ul>
+                </li>
+            </ul>
+	</footer>
+        
+        {% block javascripts %}
+            <!-- <script src="js/jquery-2.0.3.min.js"></script> -->	
+            <script src="js/jquery-1.10.2.min.js"></script>
+            <script src="js/respond.js"></script>
+            <script src="js/global.js"></script>
+        {% endblock %}
+</body>
+</html>
+

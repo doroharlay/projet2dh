@@ -1,0 +1,557 @@
+/* Petits écrans --------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1100px){
+
+	/**** ----------------------------- PAGE TOUR ----------------------------- ****/
+	
+	/** ----------------------------- liens presse ----------------------------- **/
+
+	.presse {
+		text-align: center;
+	}
+	.titre_presse {
+		margin-left: 0;
+		float: none;
+		height: auto;
+		line-height: 3em;
+	}
+	.presse ul {
+		margin-right: 0;
+		float: none;
+	}
+	section nav ul li {
+		display: inline-block;
+		padding: 1em 0 .5em 0;
+	}
+	.presse nav a {
+		padding: 0 1em 0 1em;
+	}
+
+	/** ----------------------------- section articles ----------------------------- **/
+
+	/* article 05 // BLOGGING */
+
+	/* secondary-slider */
+
+	.secondary-slider_top {
+		height: 3.7em;
+	}
+	.secondary-slider_bottom {
+		height: 2.1em;
+		background-position: 0 -5em;
+	}
+
+	/* article 11 // SEARCH & CONTRIBUTORS */
+
+	/* bloc invité*/
+
+	.bandeau {
+		padding: 2em 1em 2em 0;
+	}
+	.bandeau span {
+		font-size: 1.4em;
+		padding-right: 1em;
+	}
+	.bandeau img {
+		padding-left: 1em;
+	}
+}
+
+
+
+
+
+
+
+/* Tablettes --------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 960px){
+
+	/***** ----------------------------- GLOBAL ----------------------------- *****/
+
+	/** ----------------------------- header ----------------------------- **/
+	header {
+		text-align: center;
+	}
+	.logo {
+		float: none;
+		margin:auto;
+		height: 3.4em;
+		line-height: 9em;
+	}
+	header ul {
+		float: none;
+		margin: auto;
+	}
+	header nav a {
+		height: 3em;
+		padding: 3em 1.5em 2em 1.5em;
+		line-height: 3em;
+	}
+
+	/** ----------------------------- footer ----------------------------- **/
+	footer > ul {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+	.try a {
+		font-size: 1.3em;
+		margin-top: 5.7em;
+	}
+
+	/**** ----------------------------- PAGE PRICING ----------------------------- ****/
+
+	/** ----------------------------- banner ----------------------------- **/
+	.fond_trial h1 {
+		font-size: 3.8em;
+	}
+
+	/** ----------------------------- global sections ----------------------------- **/
+
+	section > ul {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+
+	/** ----------------------------- section formules ----------------------------- **/
+
+	/* liste options */
+	.option {
+		padding: 1.2em 0 1.2em 10%;
+	}
+
+	/* pastille popular */
+	.popular {
+		background-color: #54ca90;
+		width: 80px;
+		height: 80px;
+		border-radius: 40px;
+		position: absolute;
+		top: -40px;
+		right: -20px;	
+	}
+	
+	/* pastille free */
+	.free {
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		position: absolute;
+		top: 5px;
+		left : 60%;	
+	}
+	.free > p {
+		padding-top: 11px;
+		font-size: 8px;
+	}
+
+	/* tooltip */
+	.option .tooltip_aspect {
+		width: 60%;
+		position: absolute;
+		top: 2.5em;
+		left: 10%;
+		padding: 1.5em 1em 1em 4em;
+		line-height: 1.4em;
+	}
+	.info_i {
+		position: absolute;
+		top: 1.5em;
+		left: 1.5em;
+	}
+	.info_titre {
+		color: white;
+		font-size: 1.2em;
+		padding-bottom: 1em;
+	}
+
+	/**** ----------------------------- PAGE TOUR ----------------------------- ****/
+
+	/** ----------------------------- banner ----------------------------- **/
+
+	.fond_tour h1 {
+		font-size: 3.8em;
+	}
+
+	/** ----------------------------- section articles ----------------------------- **/
+
+	/* global */
+
+	.haut {
+		padding-top: 6em;
+	}
+	.haut_bas {
+		padding-top: 6em;
+		padding-bottom: 4em;	
+	}
+	.centrer {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.texte_gauche {
+		margin-right: 20%;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	.filet_inf_centre,
+	.filet_inf_gauche {
+		width: 30%;
+		margin-top: 1.5em;
+		margin-bottom: 2em;
+	}
+	article p {
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+	.marge_img {
+		margin-top: 3em;
+		width: 100%;
+	}
+	.largeur_30 {
+		width: 100%;
+		margin-top: 0;
+	}
+	.largeur_44 {
+		width: 100%;
+	}
+	.largeur_70 {
+		width: 100%;
+	}
+	.largeur_30,
+	.largeur_70,
+	.largeur_44 {
+		display: block;
+		vertical-align: top;	
+	}
+	.largeur_30 .filet_inf_gauche {
+		width: 30%;
+	}
+	.largeur_70 img {
+		width: 100%;
+	}
+
+	/* article 05 // BLOGGING */
+
+	.argument {
+		width: 100%;
+		display: block;
+	}
+
+	/* secondary-slider */
+
+	.secondary-slider_top {
+		height: 3.4em;
+	}
+	.secondary-slider_bottom {
+		height: 3em;
+		background-position: 0 -3.8em;
+	}
+
+	/* article 08 // CONNECT */
+
+	.services p {
+		margin: 1em 0 2em 0;
+	}
+	.services h3:first-child {
+		padding-top: 2em;
+	}
+
+	/* article 09 // COMMENTING */
+
+	.comment_30 {
+		float: none;
+	}
+	.comment_70 {
+		float: none;
+	}
+
+	/* article 11 // SEARCH & CONTRIBUTORS */
+
+	.largeur_44:nth-child(1) {
+		float: none;
+	}
+	.largeur_44:nth-child(2) {
+		float: none;
+		padding-top: 4em;
+	}
+	.largeur_44 .filet_inf_gauche {
+		width: 30%;
+	}
+	.largeur_44 img {
+		margin: 3em 15% 0 15%;
+		width: 70%;
+	}
+
+	/* article 11 // SEARCH & CONTRIBUTORS */
+
+	/* bloc invité*/
+
+	#invite {
+		width: 60%;
+	}
+	#invite .bandeau img {
+		margin: 0;
+	}
+
+	/* article 12 // CLOUD & CUSTOM DOMAIN */
+
+	#position .free {
+		position: absolute;
+		top: 3em;
+		left: 30%;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* Mobiles --------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 460px){
+
+	/***** ----------------------------- GLOBAL ----------------------------- *****/
+	
+	/** ----------------------------- header ----------------------------- **/
+	header {
+		text-align: center;
+		height: 9.5em;
+	}
+	.logo {
+		float: none;
+		margin:auto auto 3em;
+		height: 3.4em;
+		line-height: 9em;
+	}
+	header ul {
+		float: none;
+		margin: auto;
+	}
+	header li {
+		display: block;
+	}
+	header nav a {
+		height: 0;
+		padding: 1.3em 0 1.2em 0;
+		line-height: 0;
+		border-bottom: .1em dotted #d3d3d3;
+		background-color: white;
+	}
+	header nav .menu a {
+		color: white;
+		font-weight: bold;
+		background-color: #1c1c1c;		
+	}
+	.menu {
+		display: block;
+	}
+	.invisible {
+		display: none;
+	}
+
+	/** ----------------------------- footer ----------------------------- **/
+	footer {
+		height: 105em;
+		padding-top: .5em;
+		text-align: center;
+	}
+	footer > ul > li:nth-child(1),
+	footer > ul > li:nth-child(2),
+	footer > ul > li:nth-child(3),
+	footer > ul > li:nth-child(4) {
+		float: none;
+		width: 100%;
+	}
+	footer .titre {
+		margin-bottom: 1.3em;
+		margin-top: 3em;
+	}
+
+	/**** ----------------------------- PAGE PRICING ----------------------------- ****/
+
+	/** ----------------------------- banner ----------------------------- **/
+	.banner {
+		margin-top: 9.5em;
+	}
+	.fond_trial {
+		height: 30em;
+	}
+	.filet_sup {
+		height: 7em;
+	}
+	.fond_trial h1 {
+		font-size: 2.5em;
+	}
+	.fond_trial a {
+		font-size: 1.2em;
+	}
+
+	/** ----------------------------- global sections ----------------------------- **/
+
+	.colonne_2 > li {
+		float: none;
+		width: 100%;
+		margin-top: 8.5em;
+		margin-bottom: 0;
+	}
+	.faq .colonne_2 > li:nth-child(3) {
+		margin-top: 0em;
+	}
+	ul .colonne_2_marge {
+		display: none;
+	}
+
+		
+	/**** ----------------------------- PAGE TOUR ----------------------------- ****/
+
+	/** ----------------------------- banner ----------------------------- **/
+
+	.fond_tour {
+		height: 40em;
+	}
+	.fond_tour h1 {
+		font-size: 2.5em;
+	}
+	.banner p {
+		font-size: 1.2em;
+		margin-bottom: 3em;
+	}
+	.fond_tour div > a {
+		margin-right: 0;
+		font-size: 1.2em;
+	}
+	.fond_tour span {
+		margin-left: 0;
+		display: block;
+		margin-top: 3em;
+	}
+	.fond_tour div span a {
+		font-size: 1.1em;	
+	}
+	.fond_tour img {
+		padding-left: .7em;
+	}
+
+	/** ----------------------------- liens presse ----------------------------- **/
+
+	section nav ul li {
+		display: block;
+		padding: 0;
+	}
+	.presse nav a {
+		display: block;
+	}
+	.presse nav .menu_presse a {
+		padding: 1em 0;
+		opacity: 1;
+		color: white;
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: #1c1c1c;
+		text-decoration: none;		
+	}
+	.menu_presse {
+		display: block;
+	}
+	.invisible {
+		display: none;
+	}
+	
+	/** ----------------------------- section articles ----------------------------- **/
+
+	/* global */
+
+	.haut {
+		padding-top: 4em;
+	}
+	.haut_bas {
+		padding-top: 4em;
+		padding-bottom: 2em;	
+	}
+	article > div {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+	.centrer {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.texte_gauche {
+		margin-right: 0;
+	}
+	h2 {
+		font-size: 1.8em;
+	}
+	h3 {
+		font-size: 1.2em;
+	}
+	article p {
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	/* article 05 // BLOGGING */
+
+	/* secondary-slider */
+
+	.secondary-slider_top {
+		height: 1.8em;
+	}
+	.secondary-slider_bottom {
+		height: 1em;
+		background-position: 0 -2.1em;
+	}
+	
+	/* article 11 // SEARCH & CONTRIBUTORS */
+
+	.largeur_44 img {
+		margin: 3em 0 0 0;
+		width: 100%;
+	}
+
+	/* article 11 // SEARCH & CONTRIBUTORS */
+
+	/* bloc invité*/
+
+	#invite {
+		width: 100%;
+		margin-top: 3em;
+	}
+	.bandeau {
+	    margin-left: 0;
+	    padding: 2em 0 2em 0;
+	    text-align: center;
+	}
+	.citation p {
+		font-size: 1.2em;
+	}
+	#invite .bandeau img {
+		display: inline-block;
+		padding: 0 0 0 1em;
+		width: 9.3em;
+		height: 1.6em;
+	}
+	#portrait {
+	    top: 7em;
+	}
+	.citation {
+	    padding: 1em 1em 0 13em;
+	}
+	#guillemet {
+	    left: 2.8em;
+	    top: 2em;
+	}
+
+	/* article 12 // CLOUD & CUSTOM DOMAIN */
+
+	#position .free {
+		position: absolute;
+		top: 3em;
+		left: 50%;
+	}
+}

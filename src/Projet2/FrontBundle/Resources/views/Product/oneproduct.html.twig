@@ -1,0 +1,45 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+    {# fil d'ariane #}
+    <a class="btn-lg" href=" {{ url('onetype', { 'id' : product.type.id }) }}">Back</a>
+
+    {% if product.isAvailable %} 
+            <h2 class="greyback">{{ product.name | capitalize }}</h2>
+
+
+            {% if product.image is not null %}
+                    <div class="figure">
+                        <figure>
+                            <img src="{{ asset ('bundles/front/img/products/' ~ product.image) }}" alt="Image responsive"> 
+                        </figure>
+                        <small>Disponible depuis le {{ product.creationDate | date('d/m/Y') }}</small>
+                    </div>
+            {% endif %}
+
+            <span class="greyback price"> {{ product.price }} € </span>
+            <br><br>
+
+            {% if product.stockQty > 0 %}
+            {# on affiche le formulaire #}
+         
+                <form class="form" role="form" action="{{ url('addbasket', { 'id' : product.id }) }}" method="post">
+                    <div class="form-group">
+                        <label for="qty">Quantity :&nbsp;</label>
+                        <input class="form-control" type="text" id="qty" name="qty" value="1" /></br>
+                    </div>
+                    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Add to shopping basket"/>
+                </form>
+            
+            {% else %}
+                <p class='unavailable'>Product not available at the moment</p>
+            {% endif %}
+
+        <br><br>
+        <p>{{ product.description }}</p>
+        <div class="clear"></div>
+    {% else %} 
+            <p>Ce produit n'existe plus</p>
+    {% endif %} 
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+
+    <a class="btn-lg" href=" {{ url('roottype') }}">Back to all types</a>
+    
+
+        <h1 class="greyback"> 
+            {#{ On n'affiche le nom de la catégorie }#}
+            {{ listeProducts.0.type.name | upper }}
+        </h1> 
+
+        {% for product in listeProducts %}             
+            {% if product.isAvailable %}
+
+                <h2 class="greyback">{{ product.name | capitalize }}</h2>
+
+            
+                {% if product.image is not null %}
+                        <div class="figure">
+                            <figure>
+                                <img src="{{ asset ('bundles/front/img/products/' ~ product.image) }}" alt="Image responsive"> 
+                            </figure>
+                            <small>Disponible depuis le {{ product.creationDate | date('d/m/Y') }}</small>
+                        </div>
+                {% endif %}
+
+
+
+                <a class="btn btn-primary btn-lg" href=" {{ url('oneproduct', { 'id' : product.id }) }}">More details about this product</a>
+                <p class="shortdescription">{{ product.description }}</p>
+                <div class="clear"></div>
+            {% endif %}
+
+        {% endfor %}
+           
+
+
+{% endblock %}

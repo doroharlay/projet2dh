@@ -1,0 +1,23 @@
+back_AccueilAdmin:
+    resource:  '@BackBundle/Controller/AccueilAdminController.php'
+    type: annotation
+    
+back_ProductAdmin:
+    resource:  '@BackBundle/Controller/ProductAdminController.php'
+    type: annotation
+    
+back_CategoryAdmin:
+    resource:  '@BackBundle/Controller/CategoryAdminController.php'
+    type: annotation
+    
+back_TypeAdmin:
+    resource:  '@BackBundle/Controller/TypeAdminController.php'
+    type: annotation
+
+back_UserAdmin:
+    resource:  '@BackBundle/Controller/USerAdminController.php'
+    type: annotation
+    
+back_CommandAdmin:
+    resource:  '@BackBundle/Controller/CommandAdminController.php'
+    type: annotation

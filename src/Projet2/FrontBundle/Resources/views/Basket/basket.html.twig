@@ -1,0 +1,43 @@
+{% extends 'FrontBundle::base.html.twig' %}
+
+{% block section %}
+
+{% if panier == null %}
+    <p class="advertising">{{ 'Votre panier est vide' }}</p>
+{% elseif panier.product is defined %}
+    {% if panier.product != null %}
+        <h1>Your basket</h1>
+        <form method="post" action="majbasket">
+            <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>{{ 'Product'}}</th>
+                        <th>{{ 'Price' }}</th>
+                        <th colspan="2">{{ 'Quantity'}}</th>
+                    </tr> 
+                    {% for product in panier.product %}
+                        <tr>
+                            <td>{{ product.name}}</td>
+                            <td>{{ product.price~'€'}}</td>
+                            <td width="10%"><input type="text" name="qty[]" value="{{ product.qty}}"/></td>
+                            <td><a href="{{ url('removebasket', { 'id' : product.id }) }}">Remove</a></td>
+                        </tr>
+                    {% endfor%}
+            </table>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Update your basket">
+
+        </form>
+        <br><br>
+        <form method="post" action="validatebasket">
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Validate your command"><br>
+        <form>
+    {% else %}
+        <p class="advertising">{{ 'Votre panier est vide' }}</p>
+    {% endif %}       
+{% endif %}
+
+
+
+
+ 
+
+{% endblock %}
